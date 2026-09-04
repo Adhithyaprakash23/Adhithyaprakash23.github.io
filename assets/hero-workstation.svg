@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 700">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#061427"/><stop offset="1" stop-color="#0b0c22"/></linearGradient>
+    <linearGradient id="cyan" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#38e8ff"/><stop offset="1" stop-color="#7667ff"/></linearGradient>
+    <linearGradient id="mag" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ff6dcf"/><stop offset="1" stop-color="#7d62ff"/></linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="7" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="960" height="700" rx="32" fill="url(#bg)"/>
+  <g opacity=".25" stroke="#4bdcff" stroke-width="1">
+    <path d="M0 80H960M0 160H960M0 240H960M0 320H960M0 400H960M0 480H960M0 560H960M0 640H960"/>
+    <path d="M80 0V700M160 0V700M240 0V700M320 0V700M400 0V700M480 0V700M560 0V700M640 0V700M720 0V700M800 0V700M880 0V700"/>
+  </g>
+  <g transform="translate(100,90)">
+    <rect x="0" y="0" width="500" height="310" rx="20" fill="#081a2c" stroke="#3de8ff" stroke-opacity=".45"/>
+    <rect x="28" y="30" width="444" height="250" rx="12" fill="#03101d"/>
+    <circle cx="250" cy="155" r="86" fill="none" stroke="#43e7ff" stroke-opacity=".25"/>
+    <circle cx="250" cy="155" r="56" fill="none" stroke="#43e7ff" stroke-opacity=".45"/>
+    <path d="M250 64 A91 91 0 0 1 340 155" stroke="#43e7ff" stroke-width="4" fill="none" filter="url(#glow)">
+      <animateTransform attributeName="transform" type="rotate" from="0 250 155" to="360 250 155" dur="5s" repeatCount="indefinite"/>
+    </path>
+    <g fill="#58f2b7" filter="url(#glow)">
+      <circle cx="188" cy="115" r="5"><animate attributeName="opacity" values=".2;1;.2" dur="2s" repeatCount="indefinite"/></circle>
+      <circle cx="292" cy="190" r="5"><animate attributeName="opacity" values="1;.2;1" dur="2.4s" repeatCount="indefinite"/></circle>
+      <circle cx="318" cy="126" r="4"><animate attributeName="opacity" values=".3;1;.3" dur="1.6s" repeatCount="indefinite"/></circle>
+    </g>
+    <text x="48" y="58" fill="#93adc5" font-family="monospace" font-size="13">SOC OPERATIONS // LIVE</text>
+    <text x="48" y="262" fill="#58f2b7" font-family="monospace" font-size="13">THREAT CORRELATION ACTIVE</text>
+    <rect x="165" y="315" width="170" height="18" rx="8" fill="#112b42"/>
+    <path d="M250 333v72" stroke="#223d56" stroke-width="11"/>
+    <rect x="190" y="400" width="120" height="12" rx="6" fill="#223d56"/>
+  </g>
+  <g transform="translate(620,160)">
+    <rect x="0" y="0" width="250" height="175" rx="17" fill="#091a2d" stroke="#ff6dcf" stroke-opacity=".4"/>
+    <text x="23" y="34" fill="#ff8bd9" font-family="monospace" font-size="13">IDENTITY RISK</text>
+    <rect x="24" y="58" width="190" height="12" rx="6" fill="#10273b"/><rect x="24" y="58" width="150" height="12" rx="6" fill="url(#mag)"/>
+    <rect x="24" y="88" width="190" height="12" rx="6" fill="#10273b"/><rect x="24" y="88" width="110" height="12" rx="6" fill="url(#cyan)"/>
+    <rect x="24" y="118" width="190" height="12" rx="6" fill="#10273b"/><rect x="24" y="118" width="165" height="12" rx="6" fill="#58f2b7"/>
+    <text x="24" y="154" fill="#83a1bc" font-family="monospace" font-size="11">MFA • RBAC • CA</text>
+  </g>
+  <g transform="translate(590,390)">
+    <rect width="285" height="170" rx="17" fill="#071827" stroke="#50e7ff" stroke-opacity=".28"/>
+    <text x="22" y="34" fill="#55e8ff" font-family="monospace" font-size="13">AUTOMATION</text>
+    <text x="22" y="70" fill="#9ab0c5" font-family="monospace" font-size="12">&gt; python triage.py</text>
+    <text x="22" y="98" fill="#58f2b7" font-family="monospace" font-size="12">[OK] context enriched</text>
+    <text x="22" y="126" fill="#ffcf66" font-family="monospace" font-size="12">[WAIT] analyst approval</text>
+  </g>
+  <g transform="translate(170,535)">
+    <path d="M0 60 C90 10 180 90 270 40 S450 60 580 20" fill="none" stroke="url(#cyan)" stroke-width="4" opacity=".7">
+      <animate attributeName="stroke-dasharray" values="0 900;180 900;0 900" dur="4s" repeatCount="indefinite"/>
+    </path>
+    <circle cx="20" cy="55" r="8" fill="#41e8ff"/><circle cx="260" cy="46" r="8" fill="#ff6dcf"/><circle cx="570" cy="22" r="8" fill="#58f2b7"/>
+  </g>
+</svg>
