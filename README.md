@@ -1,45 +1,20 @@
-# Adhithya Prakash — Cybersecurity × AI Security Portfolio
+# Adhithya Tatineni Prakash — Interactive Cybersecurity Portfolio
 
-Interactive recruiter-facing portfolio for cybersecurity engineering, cloud security, detection engineering, security automation and AI security.
+Recruiter-facing portfolio with detailed professional experience, interactive tool histories, public engineering projects, endpoint engineering work, cloud security, detection engineering, vulnerability management and AI-security focus.
 
-## Features
+## Key design choices
 
-- Animated security-network background
-- Interactive SOC command-center hero
-- Expandable roles and responsibilities
-- Filterable tools/technology explorer
-- Project case-study modals
-- AegisCloud and Enterprise SOC Detection Lab integrations
-- AI-security and agentic-security sections
-- Responsive mobile/desktop design
-- Zero-build static architecture for GitHub Pages
-- No paid hosting or backend required
+- Experience is written as direct professional work, not as a demonstration.
+- Tool cards show where the tool was used, what work was performed, workflow and related technologies.
+- Employer experience and independent/public projects are visually distinguished.
+- GitHub project links connect directly to AegisCloud and the Enterprise SOC Detection Engineering Lab.
+- Static HTML/CSS/JS: no paid backend or framework required.
+- GitHub Pages hosting is free.
 
-## Free hosting
+## Deploy
 
-The site is designed for GitHub Pages and can be hosted at:
-
-`https://Adhithyaprakash23.github.io/`
-
-when the repository is named exactly:
+Use the existing repository:
 
 `Adhithyaprakash23.github.io`
 
-## Local preview
-
-Open `index.html` in a browser, or run:
-
-```powershell
-python -m http.server 8000
-```
-
-Then visit `http://localhost:8000`.
-
-## Portfolio accuracy
-
-The site distinguishes between:
-- professional cybersecurity capabilities,
-- concrete public GitHub projects,
-- AI-security architecture concepts / portfolio labs.
-
-Do not convert concept projects into production-experience claims unless they were actually implemented and validated.
+Replace its current site files with the files in this package and push to `main`.

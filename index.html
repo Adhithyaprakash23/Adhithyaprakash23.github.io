@@ -1,37 +1,32 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Adhithya Prakash — Cybersecurity Engineer portfolio focused on security operations, cloud security, detection engineering, automation and AI security." />
-  <meta name="theme-color" content="#07111f" />
-  <meta property="og:title" content="Adhithya Prakash | Cybersecurity & AI Security Engineer" />
-  <meta property="og:description" content="Interactive cybersecurity engineering portfolio: SOC, cloud security, detection engineering, security automation and AI security." />
-  <meta property="og:type" content="website" />
-  <title>Adhithya Prakash | Cybersecurity & AI Security Engineer</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Adhithya Tatineni Prakash — Cybersecurity Engineer portfolio covering security operations, detection engineering, cloud security, vulnerability management, endpoint engineering, automation and AI security.">
+  <meta name="theme-color" content="#050914">
+  <title>Adhithya Tatineni Prakash | Cybersecurity & AI Security Engineer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <canvas id="networkCanvas" aria-hidden="true"></canvas>
-  <div class="noise" aria-hidden="true"></div>
+  <canvas id="bgCanvas"></canvas>
+  <div class="aurora aurora-a"></div><div class="aurora aurora-b"></div>
+  <div class="grid-overlay"></div>
 
-  <header class="nav-wrap">
+  <header class="site-header">
     <nav class="nav container">
-      <a class="brand" href="#home" aria-label="Home">
-        <span class="brand-mark">AP</span>
-        <span class="brand-copy">
-          <strong>Adhithya Prakash</strong>
-          <small>Cybersecurity × AI Security</small>
-        </span>
+      <a class="brand" href="#home">
+        <span class="brand-mark">ATP</span>
+        <span><b>Adhithya Tatineni Prakash</b><small>Cybersecurity Engineer</small></span>
       </a>
-      <button class="nav-toggle" id="navToggle" aria-label="Open navigation">☰</button>
+      <button class="menu-btn" id="menuBtn" aria-label="Toggle navigation">☰</button>
       <div class="nav-links" id="navLinks">
-        <a href="#about">About</a>
+        <a href="#home">Home</a>
         <a href="#experience">Experience</a>
-        <a href="#capabilities">Capabilities</a>
+        <a href="#tools">Tools</a>
         <a href="#projects">Projects</a>
         <a href="#ai">AI Security</a>
         <a href="#credentials">Credentials</a>
@@ -43,294 +38,273 @@
   <main>
     <section id="home" class="hero container">
       <div class="hero-copy reveal">
-        <div class="eyebrow"><span class="pulse-dot"></span> DEFEND • DETECT • AUTOMATE • BUILD</div>
-        <h1>Cybersecurity engineering<br><span class="gradient-text">built for the AI era.</span></h1>
+        <span class="eyebrow"><i class="pulse"></i> SECURITY OPERATIONS • CLOUD • DETECTION • AUTOMATION • AI SECURITY</span>
+        <h1>Cybersecurity engineering<br><span>across the full defensive stack.</span></h1>
         <p class="hero-lead">
-          I work across security operations, detection engineering, cloud security, vulnerability management,
-          identity protection and security automation — with a growing focus on AI-assisted defense and secure agentic systems.
+          I work across enterprise security operations, endpoint detection, cloud security, vulnerability management,
+          identity protection, incident response, application deployment engineering and security automation.
+          My experience spans SIEM, EDR, cloud monitoring, KQL/SPL investigations, Windows endpoint engineering,
+          control assurance and Python/PowerShell-driven automation.
         </p>
-        <div class="hero-tags">
-          <span>Security Operations</span><span>Cloud Security</span><span>Detection Engineering</span>
-          <span>Security Automation</span><span>AI Security</span>
-        </div>
         <div class="hero-actions">
-          <a class="btn primary" href="#projects">Explore Projects <span>↗</span></a>
-          <a class="btn ghost" target="_blank" rel="noopener" href="https://github.com/Adhithyaprakash23">GitHub</a>
-          <a class="btn ghost" target="_blank" rel="noopener" href="https://www.linkedin.com/in/adhithyaprakash">LinkedIn</a>
+          <a class="btn primary" href="#experience">Explore my experience ↓</a>
+          <a class="btn" href="#tools">Explore tools</a>
+          <a class="btn" target="_blank" rel="noopener" href="https://github.com/Adhithyaprakash23">GitHub ↗</a>
+          <a class="btn" target="_blank" rel="noopener" href="https://www.linkedin.com/in/adhithyaprakash">LinkedIn ↗</a>
         </div>
-        <div class="quick-stats">
-          <div><strong class="counter" data-target="4">0</strong><span>+ years cybersecurity</span></div>
-          <div><strong class="counter" data-target="10">0</strong><span>+ security domains & tools</span></div>
-          <div><strong class="counter" data-target="2">0</strong><span>flagship GitHub builds</span></div>
-          <div><strong>M.S.</strong><span>Cybersecurity · UNC Charlotte</span></div>
+        <div class="hero-stats">
+          <div><b>4+</b><span>Years</span><small>Cybersecurity experience</small></div>
+          <div><b>4</b><span>Core roles</span><small>Security engineering</small></div>
+          <div><b>25+</b><span>Tools & technologies</span><small>Security + endpoint stack</small></div>
+          <div><b>2</b><span>Flagship projects</span><small>Public GitHub repositories</small></div>
         </div>
       </div>
 
       <div class="hero-visual reveal delay-1">
-        <div class="command-center tilt">
-          <div class="panel-top">
-            <span>SECURITY OPERATIONS / LIVE SIMULATION</span>
-            <span class="status">● ONLINE</span>
+        <div class="soc-console tilt">
+          <div class="console-head">
+            <span>ATP // SECURITY OPERATIONS</span><span class="live">● LIVE</span>
           </div>
           <div class="radar">
-            <div class="radar-ring r1"></div><div class="radar-ring r2"></div><div class="radar-ring r3"></div>
-            <div class="radar-sweep"></div>
-            <div class="node n1"></div><div class="node n2"></div><div class="node n3"></div><div class="node n4"></div>
-            <div class="radar-core">AP</div>
+            <div class="ring r1"></div><div class="ring r2"></div><div class="ring r3"></div>
+            <div class="sweep"></div>
+            <div class="core">
+              <svg viewBox="0 0 100 110"><path d="M50 4 91 18v34c0 27-17 45-41 55C26 97 9 79 9 52V18z"/><path d="M31 56l12 12 27-31"/></svg>
+            </div>
+            <button class="radar-node n1" data-mini="Sentinel">SIEM</button>
+            <button class="radar-node n2" data-mini="CrowdStrike">EDR</button>
+            <button class="radar-node n3" data-mini="AWS">AWS</button>
+            <button class="radar-node n4" data-mini="Qualys">VM</button>
+            <button class="radar-node n5" data-mini="Entra">IAM</button>
           </div>
-          <div class="signal-grid">
-            <div><span>Identity</span><b>Protected</b></div>
-            <div><span>Endpoint</span><b>Monitored</b></div>
-            <div><span>Cloud</span><b>Hardened</b></div>
-            <div><span>AI</span><b>Guardrailed</b></div>
-          </div>
-          <div class="terminal" id="terminal">
-            <div>$ <span id="terminalText"></span><span class="cursor">█</span></div>
+          <div class="console-feed" id="consoleFeed"></div>
+          <div class="console-status">
+            <div><span>Threat detection</span><b>ACTIVE</b></div>
+            <div><span>Cloud visibility</span><b>ACTIVE</b></div>
+            <div><span>Endpoint telemetry</span><b>ACTIVE</b></div>
+            <div><span>Automation</span><b>READY</b></div>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="about" class="section container">
-      <div class="section-heading reveal">
-        <span class="kicker">01 / ABOUT</span>
-        <h2>Security depth with engineering range.</h2>
-        <p>I connect telemetry, identity, infrastructure, application security and automation into practical defensive outcomes.</p>
+    <div class="ticker">
+      <div class="ticker-track">
+        <span>MICROSOFT SENTINEL</span><i>◆</i><span>SPLUNK</span><i>◆</i><span>CROWDSTRIKE</span><i>◆</i>
+        <span>ELK STACK</span><i>◆</i><span>QUALYS VMDR</span><i>◆</i><span>AWS</span><i>◆</i><span>AZURE</span><i>◆</i>
+        <span>KQL</span><i>◆</i><span>PYTHON</span><i>◆</i><span>POWERSHELL</span><i>◆</i><span>INTUNE</span><i>◆</i>
+        <span>MICROSOFT SENTINEL</span><i>◆</i><span>SPLUNK</span><i>◆</i><span>CROWDSTRIKE</span><i>◆</i>
+        <span>ELK STACK</span><i>◆</i><span>QUALYS VMDR</span><i>◆</i><span>AWS</span><i>◆</i><span>AZURE</span><i>◆</i>
       </div>
-      <div class="about-grid">
-        <article class="glass reveal">
-          <h3>Cybersecurity profile</h3>
-          <p>
-            Cybersecurity Engineer with 4+ years of experience spanning security operations, cloud and infrastructure security,
-            vulnerability management, incident handling, detection development, secure engineering and governance.
-          </p>
-          <p>
-            My portfolio is intentionally structured like a security program: identify risk, instrument telemetry, detect behavior,
-            investigate context, automate repeatable decisions and document the outcome.
-          </p>
-        </article>
-        <article class="glass reveal delay-1">
-          <h3>What I optimize for</h3>
-          <div class="principle-list">
-            <button class="principle active" data-detail="Translate raw security telemetry into decisions analysts and engineers can act on.">Signal → Decision</button>
-            <button class="principle" data-detail="Build repeatable workflows with Python, PowerShell, Terraform and CI/CD instead of relying on manual steps.">Automate safely</button>
-            <button class="principle" data-detail="Treat identity, endpoint, cloud and application layers as one connected attack surface.">Think end-to-end</button>
-            <button class="principle" data-detail="Use explainable controls and transparent logic so security decisions can be reviewed and improved.">Stay explainable</button>
-          </div>
-          <div class="principle-detail" id="principleDetail">Translate raw security telemetry into decisions analysts and engineers can act on.</div>
-        </article>
-      </div>
-    </section>
+    </div>
 
     <section id="experience" class="section container">
       <div class="section-heading reveal">
-        <span class="kicker">02 / EXPERIENCE</span>
-        <h2>What I work on.</h2>
-        <p>Click each responsibility lane to expand the technical detail.</p>
+        <span class="kicker">01 / EXPERIENCE</span>
+        <h2>Security work across operations, endpoint, cloud and engineering.</h2>
+        <p>Each role opens into the technical responsibilities, day-to-day workflows, tools and security work associated with that experience.</p>
       </div>
 
-      <div class="experience-shell reveal">
-        <div class="experience-intro">
-          <div>
-            <span class="role-chip">CYBERSECURITY ENGINEERING</span>
-            <h3>Security Engineer / Cybersecurity Analyst</h3>
-            <p>Enterprise security operations, cloud and infrastructure security, incident response, vulnerability management and automation.</p>
+      <div class="timeline">
+        <article class="role-card reveal">
+          <div class="role-dot"></div>
+          <div class="role-top">
+            <div>
+              <span class="date">SEP 2025 — PRESENT</span>
+              <h3>Security Engineer</h3>
+              <p>Holiday Channel</p>
+            </div>
+            <button class="btn mini role-open" data-role="holiday">Open role details ↗</button>
           </div>
-          <div class="experience-meta">
-            <span>4+ years</span>
-            <span>Enterprise + Cloud</span>
-            <span>Blue Team + Engineering</span>
-          </div>
-        </div>
+          <p class="role-summary">
+            Security monitoring, alert triage, incident response, detection tuning, security assessments and enterprise Windows application packaging/deployment support.
+          </p>
+          <div class="role-tags"><span>Splunk</span><span>Incident Response</span><span>MITRE ATT&CK</span><span>PowerShell</span><span>Intune</span><span>SCCM/MECM</span></div>
+        </article>
 
-        <div class="responsibility-grid">
-          <button class="responsibility-card" data-title="Security Operations & Incident Response" data-tools="Microsoft Sentinel, Splunk, Defender XDR, KQL, MITRE ATT&CK" data-text="Monitor security telemetry, triage alerts, investigate suspicious authentication and endpoint behavior, correlate events, document evidence and support containment/remediation decisions.">
-            <span class="icon">◎</span><b>Security Operations</b><small>Alert triage · investigation · response</small>
-          </button>
-          <button class="responsibility-card" data-title="Detection Engineering & Threat Hunting" data-tools="KQL, Sigma, Sysmon, Sentinel, Splunk, MITRE ATT&CK" data-text="Develop behavior-oriented detections, map coverage to ATT&CK, test false-positive conditions, create hunting queries and translate investigation logic into repeatable analyst workflows.">
-            <span class="icon">⌁</span><b>Detection Engineering</b><small>KQL · Sigma · hunting · ATT&CK</small>
-          </button>
-          <button class="responsibility-card" data-title="Cloud & Identity Security" data-tools="AWS, Azure, Entra ID, GuardDuty, Security Hub, IAM, MFA, RBAC, Conditional Access" data-text="Review cloud and identity controls, apply least-privilege principles, analyze access risk, monitor cloud findings and design security guardrails around authentication, roles and infrastructure.">
-            <span class="icon">☁</span><b>Cloud & Identity</b><small>AWS · Azure · IAM · Entra ID</small>
-          </button>
-          <button class="responsibility-card" data-title="Vulnerability & Exposure Management" data-tools="Qualys VMDR, CVSS, asset criticality, remediation tracking, risk prioritization" data-text="Prioritize vulnerabilities using technical severity plus business context, coordinate remediation, validate fixes, track aging and help convert scanner output into actionable exposure decisions.">
-            <span class="icon">◇</span><b>Vulnerability Management</b><small>Qualys · CVSS · remediation</small>
-          </button>
-          <button class="responsibility-card" data-title="Security Automation & DevSecOps" data-tools="Python, PowerShell, Bash, GitHub Actions, Terraform, CodeQL, Trivy, Checkov, Gitleaks" data-text="Automate enrichment, reporting and defensive workflows; integrate security checks into CI/CD; model cloud controls as code; and design guardrails that are testable and version-controlled.">
-            <span class="icon">⚙</span><b>Security Automation</b><small>Python · PowerShell · Terraform · CI/CD</small>
-          </button>
-          <button class="responsibility-card" data-title="Governance & Security Assurance" data-tools="NIST, CIS, ISO 27001, SOC 2, PCI-DSS, Drata, ServiceNow GRC" data-text="Map technical controls to security frameworks, support audit evidence and risk reporting, document control gaps and translate technical findings into business-facing remediation priorities.">
-            <span class="icon">▣</span><b>Security Assurance</b><small>NIST · CIS · ISO · SOC 2</small>
-          </button>
-        </div>
+        <article class="role-card reveal delay-1">
+          <div class="role-dot"></div>
+          <div class="role-top">
+            <div>
+              <span class="date">MAY 2024 — SEP 2025</span>
+              <h3>Cybersecurity Engineer</h3>
+              <p>Keerambadi Cyberspace</p>
+            </div>
+            <button class="btn mini role-open" data-role="keerambadi">Open role details ↗</button>
+          </div>
+          <p class="role-summary">
+            Endpoint detection and response, malware investigations, threat hunting, vulnerability response, cloud threat reviews and security-control validation.
+          </p>
+          <div class="role-tags"><span>CrowdStrike</span><span>EDR</span><span>Threat Hunting</span><span>Vulnerability Response</span><span>MITRE ATT&CK</span></div>
+        </article>
+
+        <article class="role-card reveal">
+          <div class="role-dot"></div>
+          <div class="role-top">
+            <div>
+              <span class="date">DEC 2023 — MAY 2024</span>
+              <h3>Programmer Analyst</h3>
+              <p>Cognizant Technology Solutions</p>
+            </div>
+            <button class="btn mini role-open" data-role="cognizant">Open role details ↗</button>
+          </div>
+          <p class="role-summary">
+            Centralized log review, security monitoring, anomaly investigation, secure scripting/authentication reviews, technical risk documentation and incident findings.
+          </p>
+          <div class="role-tags"><span>ELK Stack</span><span>Log Analysis</span><span>Secure Code</span><span>Threat Investigation</span><span>Python</span></div>
+        </article>
+
+        <article class="role-card reveal delay-1">
+          <div class="role-dot"></div>
+          <div class="role-top">
+            <div>
+              <span class="date">JUL 2022 — DEC 2023</span>
+              <h3>Cloud Security Engineer</h3>
+              <p>Spark Invotech</p>
+            </div>
+            <button class="btn mini role-open" data-role="spark">Open role details ↗</button>
+          </div>
+          <p class="role-summary">
+            Cloud SIEM, identity monitoring, KQL investigations, cloud security configuration reviews, DLP, SaaS security reviews, SOAR process improvement and cloud incident reporting.
+          </p>
+          <div class="role-tags"><span>Microsoft Sentinel</span><span>KQL</span><span>Azure</span><span>AWS</span><span>Microsoft 365</span><span>DLP</span></div>
+        </article>
       </div>
     </section>
 
-    <section id="capabilities" class="section container">
-      <div class="section-heading reveal">
-        <span class="kicker">03 / TECHNOLOGY</span>
-        <h2>Interactive security stack.</h2>
-        <p>Select a domain, then click a tool to see how it fits into the security workflow.</p>
-      </div>
-
-      <div class="stack-shell reveal">
-        <div class="stack-tabs" id="stackTabs">
-          <button class="active" data-filter="all">All</button>
-          <button data-filter="soc">SOC & Detection</button>
-          <button data-filter="cloud">Cloud</button>
-          <button data-filter="identity">Identity</button>
-          <button data-filter="vuln">Vulnerability</button>
-          <button data-filter="devsecops">DevSecOps</button>
-          <button data-filter="grc">GRC</button>
-          <button data-filter="ai">AI & Automation</button>
+    <section id="tools" class="section tools-section">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="kicker">02 / TOOLS & TECHNOLOGY</span>
+          <h2>Click a tool. See exactly where and how I used it.</h2>
+          <p>The tool explorer connects technologies directly to the roles, security workflows, investigations and engineering tasks associated with my experience.</p>
         </div>
-        <div class="tool-grid" id="toolGrid"></div>
+
+        <div class="tool-controls reveal">
+          <button class="tool-filter active" data-filter="all">All</button>
+          <button class="tool-filter" data-filter="siem">SIEM & Detection</button>
+          <button class="tool-filter" data-filter="endpoint">Endpoint</button>
+          <button class="tool-filter" data-filter="cloud">Cloud & Identity</button>
+          <button class="tool-filter" data-filter="vuln">Vulnerability</button>
+          <button class="tool-filter" data-filter="automation">Automation</button>
+          <button class="tool-filter" data-filter="packaging">Endpoint Engineering</button>
+          <button class="tool-filter" data-filter="assurance">Assurance</button>
+          <button class="tool-filter" data-filter="ai">AI Security</button>
+        </div>
+        <div id="toolGrid" class="tool-grid reveal"></div>
       </div>
     </section>
 
     <section id="projects" class="section container">
       <div class="section-heading reveal">
-        <span class="kicker">04 / FLAGSHIP PROJECTS</span>
-        <h2>Engineering work you can inspect.</h2>
-        <p>Each project opens into a mini case study with architecture, capabilities and source code.</p>
+        <span class="kicker">03 / PROJECTS</span>
+        <h2>Security engineering projects with code, architecture and investigation detail.</h2>
+        <p>The public projects below are separate from employer production systems and contain synthetic data where needed.</p>
       </div>
-
-      <div class="project-grid">
-        <article class="project-card flagship tilt reveal" data-project="aegis">
-          <div class="project-status">FLAGSHIP / CLOUD SECURITY</div>
-          <div class="project-graphic cloud-graphic">
-            <div class="cloud-node">AWS</div><div class="orbit o1"></div><div class="orbit o2"></div><div class="orbit o3"></div>
+      <div class="projects-grid">
+        <article class="project-card flagship tilt reveal">
+          <div class="project-badge">FLAGSHIP / CLOUD SECURITY</div>
+          <div class="project-motion cloud-motion">
+            <div class="project-core">AWS</div>
+            <span class="orbit-dot d1">GD</span><span class="orbit-dot d2">SH</span><span class="orbit-dot d3">IAM</span><span class="orbit-dot d4">TF</span>
           </div>
           <h3>AegisCloud</h3>
-          <p>Autonomous Cloud Security & Incident Response Platform with contextual risk scoring, response planning, evidence integrity and Terraform controls.</p>
-          <div class="tech-row"><span>AWS</span><span>Python</span><span>Terraform</span><span>GuardDuty</span><span>Security Hub</span></div>
+          <p>Event-driven AWS cloud security platform with finding normalization, contextual risk scoring, response planning, evidence integrity and Terraform security controls.</p>
+          <div class="project-tags"><span>Python</span><span>Terraform</span><span>GuardDuty</span><span>Security Hub</span><span>KMS</span></div>
           <div class="project-actions">
-            <button class="btn mini project-open" data-project="aegis">Case Study</button>
-            <a class="btn mini ghost" target="_blank" rel="noopener" href="https://github.com/Adhithyaprakash23/aegiscloud-autonomous-security">Source ↗</a>
+            <button class="btn mini project-open" data-project="aegis">Detailed case study</button>
+            <a class="btn mini" target="_blank" rel="noopener" href="https://github.com/Adhithyaprakash23/aegiscloud-autonomous-security">GitHub ↗</a>
           </div>
         </article>
 
-        <article class="project-card tilt reveal delay-1" data-project="soc">
-          <div class="project-status">DETECTION ENGINEERING</div>
-          <div class="project-graphic soc-graphic">
-            <div class="wave w1"></div><div class="wave w2"></div><div class="wave w3"></div><span>SOC</span>
+        <article class="project-card tilt reveal delay-1">
+          <div class="project-badge">DETECTION ENGINEERING</div>
+          <div class="project-motion soc-motion">
+            <div class="soc-pulse p1"></div><div class="soc-pulse p2"></div><div class="soc-pulse p3"></div>
+            <div class="project-core green">SOC</div>
           </div>
-          <h3>Enterprise SOC Detection Lab</h3>
-          <p>ATT&CK-aligned detections, KQL analytics, Sigma rules, threat hunts, synthetic telemetry and incident-response playbooks.</p>
-          <div class="tech-row"><span>Sentinel</span><span>KQL</span><span>Sigma</span><span>MITRE ATT&CK</span><span>Python</span></div>
+          <h3>Enterprise SOC Detection Engineering Lab</h3>
+          <p>Ten ATT&CK-aligned detections with Microsoft Sentinel KQL, Sigma rules, threat hunts, synthetic telemetry and incident-response playbooks.</p>
+          <div class="project-tags"><span>Sentinel</span><span>KQL</span><span>Sigma</span><span>MITRE ATT&CK</span><span>Python</span></div>
           <div class="project-actions">
-            <button class="btn mini project-open" data-project="soc">Case Study</button>
-            <a class="btn mini ghost" target="_blank" rel="noopener" href="https://github.com/Adhithyaprakash23/enterprise-soc-detection-lab">Source ↗</a>
+            <button class="btn mini project-open" data-project="soc">Detailed case study</button>
+            <a class="btn mini" target="_blank" rel="noopener" href="https://github.com/Adhithyaprakash23/enterprise-soc-detection-lab">GitHub ↗</a>
           </div>
         </article>
 
-        <article class="project-card tilt reveal" data-project="ai">
-          <div class="project-status">AI × CYBERSECURITY</div>
-          <div class="project-graphic ai-graphic">
-            <div class="brain-node b1"></div><div class="brain-node b2"></div><div class="brain-node b3"></div><span>AI</span>
+        <article class="project-card tilt reveal">
+          <div class="project-badge">VULNERABILITY MANAGEMENT</div>
+          <div class="project-motion vuln-motion">
+            <div class="risk-bar"><i style="--w:89%"></i></div><div class="risk-bar"><i style="--w:72%"></i></div><div class="risk-bar"><i style="--w:55%"></i></div>
+            <div class="risk-score">RISK<br><b>PRIORITIZE</b></div>
           </div>
-          <h3>AI Security Triage Copilot</h3>
-          <p>Portfolio architecture for an explainable analyst copilot that enriches alerts, summarizes evidence, scores confidence and keeps containment human-approved.</p>
-          <div class="tech-row"><span>Python</span><span>LLM Security</span><span>RAG</span><span>Guardrails</span><span>SOC</span></div>
-          <div class="project-actions">
-            <button class="btn mini project-open" data-project="ai">Explore Concept</button>
-          </div>
+          <h3>Enterprise Risk & Vulnerability Management</h3>
+          <p>Qualys VMDR-centered risk analysis, vulnerability testing, remediation tracking, security reporting and prioritization based on technical and business context.</p>
+          <div class="project-tags"><span>Qualys VMDR</span><span>CVSS</span><span>Risk Analysis</span><span>Remediation</span></div>
+          <div class="project-actions"><button class="btn mini project-open" data-project="vuln">Detailed case study</button></div>
         </article>
 
-        <article class="project-card tilt reveal delay-1" data-project="agentic">
-          <div class="project-status">AGENTIC AUTOMATION</div>
-          <div class="project-graphic agent-graphic">
-            <div class="flow-node">Sense</div><i>→</i><div class="flow-node">Reason</div><i>→</i><div class="flow-node">Act</div>
+        <article class="project-card tilt reveal delay-1">
+          <div class="project-badge">ENDPOINT ENGINEERING</div>
+          <div class="project-motion packaging-motion">
+            <div class="pkg">MSI</div><span>→</span><div class="pkg">TEST</div><span>→</span><div class="pkg">DEPLOY</div>
           </div>
-          <h3>Agentic Security Monitoring</h3>
-          <p>Event-driven monitoring concept for telemetry, threshold detection, anomaly context, automated recommendations and controlled escalation.</p>
-          <div class="tech-row"><span>Agents</span><span>Python</span><span>Automation</span><span>Telemetry</span><span>Risk</span></div>
-          <div class="project-actions">
-            <button class="btn mini project-open" data-project="agentic">Explore Concept</button>
-          </div>
+          <h3>Enterprise Application Packaging & Deployment</h3>
+          <p>Packaging, testing, deployment and troubleshooting across Windows desktop environments using MSI, MSIX, App-V, SCCM/MECM, Intune, InstallShield and PowerShell.</p>
+          <div class="project-tags"><span>MSI/MSIX</span><span>App-V</span><span>SCCM</span><span>Intune</span><span>PowerShell</span></div>
+          <div class="project-actions"><button class="btn mini project-open" data-project="packaging">Detailed case study</button></div>
         </article>
       </div>
     </section>
 
     <section id="ai" class="section container ai-section">
       <div class="section-heading reveal">
-        <span class="kicker">05 / AI SECURITY</span>
-        <h2>AI is another attack surface — and another defensive tool.</h2>
-        <p>My AI-security focus combines automation with controls that keep security decisions reviewable.</p>
+        <span class="kicker">04 / AI SECURITY & AUTOMATION</span>
+        <h2>AI-assisted security work with controls around trust and action.</h2>
+        <p>I use automation to reduce repetitive analyst work, improve documentation and structure security decisions. My AI-security focus is on grounded context, output validation, human approval and least-privilege tool access.</p>
       </div>
       <div class="ai-grid">
-        <article class="ai-card reveal">
-          <span>01</span><h3>AI-assisted SOC workflows</h3>
-          <p>Alert summarization, evidence extraction, incident context, investigation guidance and repeatable reporting — with analyst verification.</p>
-        </article>
-        <article class="ai-card reveal delay-1">
-          <span>02</span><h3>LLM / agent security</h3>
-          <p>Prompt-injection awareness, tool-use boundaries, least privilege, output validation, secrets protection and human approval for high-impact actions.</p>
-        </article>
-        <article class="ai-card reveal">
-          <span>03</span><h3>Agentic monitoring</h3>
-          <p>Designing systems that sense telemetry, reason over thresholds and context, recommend actions and escalate rather than silently making destructive changes.</p>
-        </article>
-        <article class="ai-card reveal delay-1">
-          <span>04</span><h3>Explainable automation</h3>
-          <p>Transparent scoring and decision logic instead of opaque automation, so analysts can understand why a finding or action was prioritized.</p>
-        </article>
+        <article class="ai-card reveal"><span>01</span><h3>AI-assisted documentation</h3><p>Security and cloud incident reporting workflows where AI can help organize technical context while final decisions remain analyst-owned.</p></article>
+        <article class="ai-card reveal delay-1"><span>02</span><h3>Security triage assistance</h3><p>Structured enrichment, evidence summarization and investigation guidance that supports analysts without bypassing verification.</p></article>
+        <article class="ai-card reveal"><span>03</span><h3>Agent security controls</h3><p>Prompt-injection awareness, least-privilege tool access, output validation, data boundaries and explicit approval for high-impact actions.</p></article>
+        <article class="ai-card reveal delay-1"><span>04</span><h3>Explainable automation</h3><p>Transparent scoring, deterministic policy checks and auditable decision paths so security automation can be reviewed and tuned.</p></article>
       </div>
     </section>
 
     <section id="credentials" class="section container">
       <div class="section-heading reveal">
-        <span class="kicker">06 / CREDENTIALS</span>
-        <h2>Education & security credentials.</h2>
+        <span class="kicker">05 / EDUCATION & CREDENTIALS</span>
+        <h2>Security education backed by hands-on engineering.</h2>
       </div>
       <div class="credentials-grid">
-        <article class="credential glass reveal">
-          <div class="credential-icon">🎓</div>
-          <div><h3>M.S. Cybersecurity</h3><p>University of North Carolina at Charlotte</p><small>Security operations · threat detection · incident response · forensics · network security · cloud security</small></div>
-        </article>
-        <article class="credential glass reveal delay-1">
-          <div class="credential-icon">🛡</div>
-          <div><h3>CompTIA Security+ ce</h3><p>Security+ (SY0-701)</p><small>Current certification · issued 2025</small></div>
-        </article>
-        <article class="credential glass reveal">
-          <div class="credential-icon">☁</div>
-          <div><h3>Google Cloud Security</h3><p>Cloud security skill badges</p><small>Secure Google Cloud Network · Cloud Security Fundamentals</small></div>
-        </article>
-        <article class="credential glass reveal delay-1">
-          <div class="credential-icon">◆</div>
-          <div><h3>Microsoft Security</h3><p>Security & cloud certifications earned</p><small>SC-100 · AZ-500 · SC-200 · SC-300 · SC-400 · AZ-204 (earned 2024; renewal status varies)</small></div>
-        </article>
+        <article class="credential reveal"><div class="credential-logo">UNC</div><div><h3>M.S. Cybersecurity</h3><p>University of North Carolina at Charlotte</p><small>Network security, secure programming, computer forensics, malware analysis, privacy and cryptography.</small></div></article>
+        <article class="credential reveal delay-1"><div class="credential-logo">S+</div><div><h3>CompTIA Security+</h3><p>SY0-701</p><small>Security fundamentals, operations, architecture, risk and incident response.</small></div></article>
+        <article class="credential reveal"><div class="credential-logo">MS</div><div><h3>Microsoft Security Certifications</h3><p>SC-100 · AZ-500 · SC-200 · SC-300 · SC-400 · AZ-204</p><small>Security architecture, cloud security, security operations, identity and information protection.</small></div></article>
+        <article class="credential reveal delay-1"><div class="credential-logo">GCP</div><div><h3>Google Cloud Security</h3><p>Cloud security skill badges</p><small>Secure cloud networking and cloud-security fundamentals.</small></div></article>
       </div>
     </section>
 
-    <section id="contact" class="section container contact-section">
-      <div class="contact-panel reveal">
-        <span class="kicker">07 / CONNECT</span>
-        <h2>Interested in security engineering, cloud defense or AI security?</h2>
-        <p>Explore the code, review the projects, or connect with me professionally.</p>
-        <div class="contact-actions">
+    <section id="contact" class="section container">
+      <div class="contact-card reveal">
+        <span class="kicker">06 / CONNECT</span>
+        <h2>Cybersecurity engineering, cloud defense, detection or AI security.</h2>
+        <p>Explore my work, review the code, or connect with me directly.</p>
+        <div class="hero-actions centered">
           <a class="btn primary" target="_blank" rel="noopener" href="https://www.linkedin.com/in/adhithyaprakash">LinkedIn ↗</a>
-          <a class="btn ghost" target="_blank" rel="noopener" href="https://github.com/Adhithyaprakash23">GitHub ↗</a>
-          <a class="btn ghost" href="mailto:adhithyaprakash23@gmail.com">Email</a>
+          <a class="btn" target="_blank" rel="noopener" href="https://github.com/Adhithyaprakash23">GitHub ↗</a>
+          <a class="btn" href="mailto:adhithyaprakash23@gmail.com">Email</a>
         </div>
-        <div class="availability"><span class="pulse-dot"></span> Open to cybersecurity engineering, security operations, cloud security and AI-security opportunities.</div>
       </div>
     </section>
   </main>
 
-  <footer>
-    <div class="container footer-inner">
-      <span>© <span id="year"></span> Adhithya Prakash</span>
-      <span>Built as a recruiter-facing cybersecurity engineering portfolio.</span>
-    </div>
-  </footer>
+  <footer><div class="container footer-inner"><span>© <span id="year"></span> Adhithya Tatineni Prakash</span><span>Cybersecurity & AI Security Engineering</span></div></footer>
 
-  <dialog id="detailModal" class="modal">
-    <button class="modal-close" id="modalClose" aria-label="Close">×</button>
-    <div id="modalContent"></div>
+  <dialog id="experienceModal" class="experience-modal">
+    <button class="close" id="closeModal">×</button>
+    <div id="modalBody"></div>
   </dialog>
 
-  <div class="toast" id="toast"></div>
   <script src="script.js"></script>
 </body>
 </html>
