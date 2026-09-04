@@ -35,12 +35,12 @@ function iconSVG(type){
   const wrap = p => `<svg viewBox="0 0 48 48" aria-hidden="true">${p}</svg>`;
   const text = (t,size=12) => wrap(`<text x="24" y="28" text-anchor="middle" fill="currentColor" font-family="ui-monospace,monospace" font-weight="800" font-size="${size}">${t}</text>`);
   const icons = {
-    splunk: text("splunk>",8),
+    splunk: wrap(`<path ${common} d="M8 15h8l8 9-8 9H8l8-9zM24 15h8l8 9-8 9h-8l8-9z"/>`),
     sentinel: wrap(`<path ${common} d="M8 33 18 11l8 8 6-5 8 19-15 7z"/><path ${common} d="m18 11 7 29M26 19l-1 21M32 14l-7 26"/>`),
-    crowdstrike:text("CS",12),
+    crowdstrike:wrap(`<path ${common} d="M7 20c8-8 18-10 34-6-8 2-13 5-17 10 8-4 13-4 17-2-8 2-13 6-18 13-3-6-8-10-16-15z"/>`),
     elk:wrap(`<rect ${common} x="8" y="8" width="13" height="10" rx="2"/><rect ${common} x="27" y="8" width="13" height="14" rx="2"/><rect ${common} x="8" y="24" width="13" height="16" rx="2"/><rect ${common} x="27" y="28" width="13" height="12" rx="2"/>`),
-    qualys:text("Q",18),
-    kql:text("KQL",10),
+    qualys:wrap(`<circle ${common} cx="24" cy="23" r="13"/><path ${common} d="m29 29 10 10M17 18c3-4 9-5 14-1"/>`),
+    kql:wrap(`<path ${common} d="M9 10v28M9 25l13-15M9 25l13 13M27 10h12v28H27z"/><path ${common} d="M30 16h6M30 23h6M30 30h6"/>`),
     aws:wrap(`<text x="24" y="23" text-anchor="middle" fill="currentColor" font-family="ui-sans-serif" font-weight="800" font-size="13">aws</text><path ${common} d="M12 30c8 6 18 6 25 0M33 29l5 1-3 4"/>`),
     azure:wrap(`<path ${common} d="M18 8 6 36h12l6-10 7 10h11L27 8z"/><path ${common} d="m18 36 8-15 5 15"/>`),
     powershell:wrap(`<rect ${common} x="6" y="9" width="36" height="30" rx="6"/><path ${common} d="m14 17 8 7-8 7M25 32h10"/>`),
@@ -48,8 +48,8 @@ function iconSVG(type){
     mecm:wrap(`<circle ${common} cx="24" cy="11" r="5"/><circle ${common} cx="11" cy="33" r="5"/><circle ${common} cx="37" cy="33" r="5"/><path ${common} d="M21 15 14 29M27 15l7 14M16 33h16"/>`),
     intune:wrap(`<path ${common} d="M12 14c4-7 18-7 22 0 3 5-1 9-6 10-6 2-10 4-10 9 0 4 4 7 9 7 6 0 10-4 10-9"/><circle ${common} cx="13" cy="13" r="4"/>`),
     python:wrap(`<path ${common} d="M24 7c-8 0-9 4-9 9v5h15v4H12c-5 0-7 4-7 9s3 8 8 8h5v-7c0-5 3-8 8-8h8c5 0 8-3 8-8v-5c0-4-3-7-8-7z"/><circle cx="31" cy="13" r="1.6" fill="currentColor"/><circle cx="17" cy="35" r="1.6" fill="currentColor"/>`),
-    terraform:text("TF",14),
-    attack:text("ATT&CK",7),
+    terraform:wrap(`<path ${common} d="m8 10 10 6v12L8 22zM20 17l10 6v12l-10-6zM32 11l8 5v11l-8-5z"/>`),
+    attack:wrap(`<path ${common} d="M24 7v34M7 24h34M12 12l24 24M36 12 12 36"/><circle ${common} cx="24" cy="24" r="7"/>`),
     ai:wrap(`<circle ${common} cx="24" cy="24" r="6"/><circle ${common} cx="24" cy="8" r="4"/><circle ${common} cx="39" cy="17" r="4"/><circle ${common} cx="36" cy="35" r="4"/><circle ${common} cx="12" cy="35" r="4"/><circle ${common} cx="9" cy="17" r="4"/><path ${common} d="M24 12v6M35 19l-6 3M32 32l-5-4M16 32l5-4M13 19l6 3"/>`)
   };
   return icons[type] || text("SEC",9);
@@ -129,3 +129,18 @@ function openCommand(){renderCommand();command.showModal();setTimeout(()=>comman
 document.getElementById("commandHint").onclick=openCommand;
 commandInput.oninput=e=>renderCommand(e.target.value);
 addEventListener("keydown",e=>{if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==="k"){e.preventDefault();command.open?command.close():openCommand()}if(e.key==="/"&&!["INPUT","TEXTAREA"].includes(document.activeElement.tagName)){e.preventDefault();openCommand()}});
+
+// Pointer-responsive ambient motion. Decorative only; disabled for reduced motion users.
+if (!matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  const scene = document.querySelector(".motion-scene");
+  window.addEventListener("pointermove", (e) => {
+    const x = (e.clientX / innerWidth - .5);
+    const y = (e.clientY / innerHeight - .5);
+    scene.style.transform = `translate3d(${x * 10}px,${y * 10}px,0)`;
+    document.querySelectorAll(".cyber-orb").forEach((orb, i) => {
+      const m = (i + 1) * 5;
+      orb.style.marginLeft = `${x * m}px`;
+      orb.style.marginTop = `${y * m}px`;
+    });
+  }, {passive:true});
+}
