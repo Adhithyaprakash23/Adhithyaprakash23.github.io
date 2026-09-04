@@ -1,0 +1,14 @@
+name: Portfolio checks
+on: [push, pull_request]
+jobs:
+  static-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check required files
+        run: |
+          test -f index.html
+          test -f styles.css
+          test -f script.js
+          grep -q "AegisCloud" index.html
+          grep -q "Enterprise SOC Detection" index.html
