@@ -1,88 +1,85 @@
-const roleData={
- holiday:{title:"Security Engineer",company:"Holiday Channel",date:"Sep 2025 — Present",summary:"Security monitoring, incident response, detection tuning, security assessments and enterprise Windows application packaging/deployment support.",tools:["Splunk","MITRE ATT&CK","PowerShell","MSI / MSIX","App-V","SCCM / MECM","Microsoft Intune","InstallShield","Windows 10/11"],work:["Monitor security events and investigate alerts in Splunk across user, endpoint, application and infrastructure context.","Perform alert triage and incident investigation, documenting findings, response actions and remediation steps.","Tune logging and alerting logic and map detection behavior to MITRE ATT&CK concepts.","Support internal/external security assessments, vulnerability testing and security improvements.","Package, test, deploy and troubleshoot Windows applications across enterprise desktop environments.","Support updates and production releases using MSI, MSIX, App-V, SCCM/MECM, Intune, InstallShield and PowerShell."],flow:["Event / request","Triage / intake","Investigation / build","Validation","Response / deployment","Documentation"]},
- keerambadi:{title:"Cybersecurity Engineer",company:"Keerambadi Cyberspace",date:"May 2024 — Sep 2025",summary:"Endpoint detection and response, malware investigations, threat hunting, vulnerability response and security-control reviews.",tools:["CrowdStrike","EDR","Threat Hunting","MITRE ATT&CK","Vulnerability Management","Cloud Security Reviews"],work:["Use CrowdStrike EDR telemetry to investigate endpoint alerts, suspicious processes, malware activity and unauthorized access.","Review process trees and endpoint activity to understand scope and possible lateral movement.","Perform threat hunting and security reviews across enterprise environments.","Support vulnerability response by prioritizing findings and validating remediation.","Map investigation and response workflows to MITRE ATT&CK concepts.","Prepare security reports and support control assessments."],flow:["EDR alert","Process / host context","Scope analysis","Risk review","Response","Report"]},
- cognizant:{title:"Programmer Analyst",company:"Cognizant Technology Solutions",date:"Dec 2023 — May 2024",summary:"Centralized log analysis, application/server monitoring, anomaly investigation and secure engineering support.",tools:["ELK Stack","Elasticsearch","Kibana","Python","Log Analysis","Secure Code Review"],work:["Use ELK Stack for centralized log review and security monitoring across applications and servers.","Investigate anomalous events by correlating timestamps, source context, application behavior and system activity.","Monitor network/system access and support threat-intelligence analysis.","Write and review scripts, authentication logic and secure-code changes that support detection work.","Document incident findings, troubleshooting notes, remediation actions and technical risks."],flow:["Log ingestion","Search / query","Correlation","Validation","Recommendation","Documentation"]},
- spark:{title:"Cloud Security Engineer",company:"Spark Invotech",date:"Jul 2022 — Dec 2023",summary:"Cloud SIEM, identity monitoring, KQL investigations, cloud-security reviews, DLP, SOAR and cloud incident reporting.",tools:["Microsoft Sentinel","KQL","Azure","AWS","Microsoft 365","DLP","SOAR","AI-assisted Documentation"],work:["Use Microsoft Sentinel for cloud SIEM, security-event correlation and investigations across Azure, Microsoft 365 and AWS-connected environments.","Write and refine KQL queries for suspicious sign-ins, identity activity and cloud-security events.","Review cloud-security configurations and detection rules, focusing on identity, access and misconfiguration risk.","Support DLP workflows and SaaS security reviews.","Contribute to SOAR process improvements and response automation.","Use AI-assisted documentation for cloud incident-response reporting while keeping final decisions analyst-owned."],flow:["Cloud telemetry","Sentinel","KQL","Identity / config review","Response","Cloud report"]}
+document.getElementById("year").textContent = new Date().getFullYear();
+
+const cases = {
+  aegis: {
+    tag:"CASE 001 / CLOUD SECURITY",
+    title:"AegisCloud Autonomous Security",
+    intro:"A portfolio-grade security engineering concept for converting cloud telemetry and control state into prioritized, explainable response.",
+    sections:[
+      ["Problem","Cloud environments produce abundant signals, but security value comes from correlating identity, asset context, exposure and control evidence into an actionable decision."],
+      ["Engineering approach","Ingest security context → normalize evidence → score risk → map control coverage → generate response recommendations → retain evidence for review."],
+      ["What to inspect","Architecture, threat model, detection logic, automation decisions, guardrails and repository documentation."],
+      ["Repository",'<a href="https://github.com/Adhithyaprakash23/aegiscloud-autonomous-security" target="_blank" rel="noopener">Open AegisCloud on GitHub ↗</a>']
+    ]
+  },
+  soc: {
+    tag:"CASE 002 / DETECTION ENGINEERING",
+    title:"Enterprise SOC Detection Engineering Lab",
+    intro:"A detection-focused repository built around the full analyst loop: attack behavior, telemetry, detection, mapping, investigation and response.",
+    sections:[
+      ["Problem","Alerts without context create noise. Useful detection engineering connects suspicious behavior to observable evidence and a repeatable investigation path."],
+      ["Engineering approach","Model attacker behavior → define telemetry → build KQL/Sigma detections → map MITRE ATT&CK → document triage → define escalation and response."],
+      ["Evidence","Detection content, attack mappings and workflows are organized as inspectable artifacts rather than résumé claims."],
+      ["Repository",'<a href="https://github.com/Adhithyaprakash23/enterprise-soc-detection-lab" target="_blank" rel="noopener">Open SOC Detection Lab on GitHub ↗</a>']
+    ]
+  },
+  vm: {
+    tag:"CASE 003 / VULNERABILITY MANAGEMENT",
+    title:"Risk-Based Vulnerability Program",
+    intro:"A methodology for moving beyond raw vulnerability counts and prioritizing remediation based on business-relevant risk.",
+    sections:[
+      ["Decision model","Combine severity with exploitability, exposure, asset criticality and compensating controls."],
+      ["Lifecycle","Discover → validate → prioritize → assign → remediate → retest → report trend and residual risk."],
+      ["Portfolio evidence to add","Sanitized prioritization matrix, SLA model, remediation workflow and before/after metrics from a lab or demonstrable project."]
+    ]
+  },
+  devsec: {
+    tag:"CASE 004 / APPLICATION SECURITY",
+    title:"Secure Delivery Pipeline",
+    intro:"A DevSecOps reference workflow that makes security feedback part of software delivery instead of a final-stage gate.",
+    sections:[
+      ["Control points","Secrets scanning, SAST, dependency/SCA checks, DAST and policy gates at appropriate stages."],
+      ["Developer experience","Findings should be deduplicated, severity-aware and accompanied by actionable remediation context."],
+      ["Portfolio evidence to add","Pipeline diagram, sample safe findings, policy logic and a demonstration repository."]
+    ]
+  }
 };
 
-const tools=[
- {name:"Splunk",cat:"siem",abbr:"SPL",logo:"https://cdn.simpleicons.org/splunk/FFFFFF",color:"#ff6b52",roles:["Holiday Channel"],work:["Monitor and investigate enterprise security events and alerts.","Correlate user, endpoint, application and infrastructure context during triage.","Support detection tuning, incident response and ATT&CK mapping."],flow:["Security event","Search / SPL","Correlation","Triage","Response","Documentation"]},
- {name:"Microsoft Sentinel",cat:"siem cloud",abbr:"SIEM",logo:"https://cdn.simpleicons.org/microsoftazure/0078D4",color:"#31caff",roles:["Spark Invotech","Enterprise SOC project"],work:["Use Sentinel as a cloud SIEM for identity monitoring and cloud investigations.","Investigate Azure, Microsoft 365 and AWS-connected activity using KQL.","Build ATT&CK-aligned KQL detections and hunting queries in my public SOC repository."],flow:["Telemetry","Sentinel analytics","KQL","Entity pivot","Decision","Response"]},
- {name:"CrowdStrike",cat:"endpoint",abbr:"CS",logo:"",color:"#ff4666",roles:["Keerambadi Cyberspace"],work:["Investigate endpoint alerts, malware behavior and suspicious processes.","Review process trees and endpoint context to understand scope.","Support endpoint threat response and hunting."],flow:["EDR alert","Process tree","Host / user context","Scope","Response","Closure"]},
- {name:"ELK Stack",cat:"siem",abbr:"ELK",logo:"https://cdn.simpleicons.org/elastic/00BFB3",color:"#00c3b4",roles:["Cognizant Technology Solutions"],work:["Centralize application/server logs for security monitoring.","Search and correlate events using Elasticsearch and Kibana.","Document suspicious events, troubleshooting and remediation findings."],flow:["Logs","Index","Search","Correlation","Investigation","Report"]},
- {name:"Qualys VMDR",cat:"vuln",abbr:"VMDR",logo:"",color:"#ec2938",roles:["Vulnerability-management project"],work:["Review vulnerability findings and technical severity.","Prioritize remediation using asset and business context.","Track remediation status, validate fixes and communicate exposure."],flow:["Scan","Finding","Prioritize","Assign","Remediate","Validate"]},
- {name:"KQL",cat:"siem cloud",abbr:"KQL",logo:"",color:"#4fd5ff",roles:["Spark Invotech","Enterprise SOC project"],work:["Write KQL for cloud and identity investigations in Sentinel.","Use filtering, summarization and entity context to investigate suspicious activity.","Build detections and hunts for identity, PowerShell, RDP and cloud activity."],flow:["Hypothesis","Select data","Query","Pivot","Tune","Investigate"]},
- {name:"AWS",cat:"cloud",abbr:"AWS",logo:"https://cdn.simpleicons.org/amazonwebservices/FF9900",color:"#ff9b28",roles:["Spark Invotech","AegisCloud project"],work:["Support cloud-security monitoring and configuration review.","Review cloud identity/access context during security investigations.","Build AegisCloud with GuardDuty, Security Hub, KMS, S3, EventBridge and Terraform."],flow:["Asset","Telemetry / finding","Context","Risk","Response plan","Evidence"]},
- {name:"Azure",cat:"cloud",abbr:"AZ",logo:"https://cdn.simpleicons.org/microsoftazure/0078D4",color:"#278cff",roles:["Spark Invotech"],work:["Work with Azure-connected telemetry and identity activity through Sentinel.","Support configuration reviews and identity monitoring.","Investigate suspicious cloud activity using KQL."],flow:["Azure event","Sentinel","KQL","Identity context","Response","Report"]},
- {name:"PowerShell",cat:"automation packaging",abbr:"PS",logo:"https://cdn.simpleicons.org/powershell/5391FE",color:"#5e9eff",roles:["Holiday Channel","Endpoint packaging work"],work:["Automate repeatable checks and orchestration in Windows application packaging/deployment.","Support prerequisite checks, silent execution, detection validation, file/registry/service checks and logging.","Use PowerShell in Windows troubleshooting and administration workflows."],flow:["Input","Prerequisite check","Execution","Detection","Logging","Return handling"]},
- {name:"MSI / MSIX",cat:"packaging",abbr:"MSI",logo:"",color:"#aa73ff",roles:["Holiday Channel"],work:["Prepare and test application packages for enterprise Windows environments.","Support silent-install behavior, prerequisites, detection logic and updates.","Validate package behavior before deployment."],flow:["Installer","Package build","Silent install","Detection","Test","Release"]},
- {name:"SCCM / MECM",cat:"packaging endpoint",abbr:"MECM",logo:"",color:"#5d88ff",roles:["Holiday Channel"],work:["Support enterprise application deployment using application/package workflows.","Work with deployment types, collections and detection rules.","Troubleshoot deployment failures by reviewing package state and endpoint conditions."],flow:["Package","Deployment type","Collection","Detection","Deploy","Troubleshoot"]},
- {name:"Microsoft Intune",cat:"packaging endpoint cloud",abbr:"INT",logo:"https://cdn.simpleicons.org/microsoft/5E5E5E",color:"#40a8ff",roles:["Holiday Channel"],work:["Support endpoint application deployment and update workflows.","Work with detection, install context and production deployment considerations.","Use Intune as part of modern endpoint-management workflows."],flow:["Win32 app","Install command","Detection","Assignment","Deploy","Monitor"]},
- {name:"Python",cat:"automation ai",abbr:"PY",logo:"https://cdn.simpleicons.org/python/3776AB",color:"#58a8ff",roles:["Cognizant","Security automation projects"],work:["Use Python for security automation, parsing and repeatable analysis.","Support query-driven investigations and secure engineering workflows.","Use Python in public projects for finding normalization, risk scoring and validation."],flow:["Input","Parse","Enrich","Logic","Output","Validate"]},
- {name:"Terraform",cat:"cloud automation",abbr:"TF",logo:"https://cdn.simpleicons.org/terraform/844FBA",color:"#9c70ff",roles:["AegisCloud project"],work:["Model AWS security controls as code.","Define GuardDuty, Security Hub, KMS, S3 logging and event-routing resources.","Validate Terraform through GitHub Actions."],flow:["Requirement","Code","Plan / validate","Review","Lab apply","Version control"]},
- {name:"MITRE ATT&CK",cat:"siem endpoint",abbr:"ATT&CK",logo:"",color:"#ff7190",roles:["Holiday Channel","Keerambadi","Enterprise SOC project"],work:["Map suspicious behavior to ATT&CK techniques.","Use ATT&CK to structure detection and investigation coverage.","Maintain ATT&CK coverage mapping in the SOC project."],flow:["Behavior","Technique","Coverage","Investigation","Response","Gap review"]},
- {name:"AI Security",cat:"ai",abbr:"AI",logo:"",color:"#ff68c9",roles:["AI-assisted documentation","Independent AI-security work"],work:["Use AI assistance to organize incident context and reduce repetitive documentation.","Focus on prompt-injection awareness, output validation, data boundaries and least-privilege tool access.","Keep high-impact actions behind explicit human approval."],flow:["Context","Grounded input","AI assistance","Validation","Human approval","Action"]}
+const modal = document.getElementById("caseModal");
+const content = document.getElementById("modalContent");
+document.querySelectorAll("[data-modal]").forEach(card => card.addEventListener("click", () => {
+  const c = cases[card.dataset.modal];
+  content.innerHTML = `<div class="kicker">${c.tag}</div><h2>${c.title}</h2><p>${c.intro}</p>` +
+    c.sections.map(([h,b])=>`<h4>${h}</h4><p>${b}</p>`).join("");
+  modal.showModal();
+}));
+document.querySelector(".close").onclick=()=>modal.close();
+modal.addEventListener("click",e=>{ if(e.target===modal) modal.close(); });
+
+const run = document.getElementById("runInvestigation");
+const lines = document.getElementById("consoleLines");
+const sequence = [
+  ["cyan","$ ingest --alert impossible_travel --user privileged.account"],
+  ["","[14:31:08] Signal: authentication from new geography + unfamiliar device"],
+  ["ok","[14:31:12] Identity context enriched: privileged role detected"],
+  ["","[14:31:15] Querying sign-in, endpoint and session telemetry..."],
+  ["warn","[14:31:18] Correlation: anomalous session + token activity"],
+  ["cyan","[14:31:22] MITRE ATT&CK mapping: T1078 Valid Accounts"],
+  ["","[14:31:25] Control check: MFA present; session risk remains elevated"],
+  ["warn","[14:31:27] VERDICT: escalate for containment and credential/session review"],
+  ["ok","[14:31:31] Evidence package generated. Investigation complete."]
 ];
-
-const projects={
- aegis:{title:"AegisCloud — Autonomous Cloud Security & Incident Response",sub:"Public GitHub engineering project",lead:"AegisCloud processes synthetic GuardDuty-style findings, normalizes security context, calculates an explainable risk score and produces resource-specific response plans.",work:["Python finding normalization for cloud-security events.","Risk scoring using severity, business criticality, internet exposure and confidence.","Response plans for EC2, S3 and IAM scenarios.","SHA-256 evidence integrity.","Terraform security baseline for GuardDuty, Security Hub, KMS, protected S3 logging and EventBridge.","GitHub Actions tests and Terraform validation."],flow:["AWS finding","Normalize","Risk score","Policy decision","Response plan","Evidence"],tools:["AWS","Python","Terraform","GuardDuty","Security Hub","KMS","EventBridge"]},
- soc:{title:"Enterprise SOC Detection Engineering Lab",sub:"Public GitHub detection-engineering project",lead:"Ten ATT&CK-aligned scenarios across identity, endpoint, Windows authentication and cloud telemetry with query logic, investigation guidance and false-positive considerations.",work:["Ten KQL detections including password spray, encoded PowerShell, suspicious process chains, admin changes, privileged cloud changes, RDP and security-tool tampering.","Sigma equivalents where portable event logic is practical.","Threat-hunting queries for unusual PowerShell parents, RDP sources, admin tools and cloud role changes.","Incident-response playbooks for password spraying, suspicious PowerShell and privileged role changes.","Synthetic telemetry plus GitHub Actions validation."],flow:["Threat behavior","Telemetry","KQL / Sigma","ATT&CK map","Triage","Response"],tools:["Microsoft Sentinel","KQL","Sigma","MITRE ATT&CK","Python"]}
-};
-
-function renderPreview(key){
- const d=roleData[key];
- document.getElementById("experiencePreview").innerHTML=`<small>${d.date}</small><h3>${d.title}</h3><p>${d.company}</p><p>${d.summary}</p><div class="preview-tools">${d.tools.map(x=>`<span>${x}</span>`).join("")}</div><button class="preview-button" onclick="openRole('${key}')">Open detailed responsibilities ↗</button>`;
-}
-renderPreview("holiday");
-
-document.querySelectorAll(".experience-card").forEach(b=>b.onclick=()=>{
- document.querySelectorAll(".experience-card").forEach(x=>x.classList.remove("active"));b.classList.add("active");renderPreview(b.dataset.role)
+run.addEventListener("click", async ()=>{
+  run.disabled=true; lines.innerHTML="";
+  for(const [cls,text] of sequence){
+    const p=document.createElement("p"); p.className=cls; p.textContent=text; lines.appendChild(p);
+    await new Promise(r=>setTimeout(r,420));
+  }
+  run.disabled=false;
 });
 
-function logoHTML(t,size="small"){return t.logo?`<img src="${t.logo}" alt="${t.name} logo" onerror="this.remove();this.parentElement.innerHTML='<span>${t.abbr}</span>'">`:`<span>${t.abbr}</span>`}
-
-function renderTools(filter="all"){
- const g=document.getElementById("toolsGrid");g.innerHTML="";
- tools.filter(t=>filter==="all"||t.cat.split(" ").includes(filter)).forEach(t=>{
-  const b=document.createElement("button");b.className="tool-card";b.style.setProperty("--tool-color",t.color);
-  b.innerHTML=`<div class="tool-logo">${logoHTML(t)}</div><h3>${t.name}</h3><p>${t.cat.replaceAll(" "," · ")}</p><span class="click-hint">CLICK FOR EXPERIENCE ↗</span>`;
-  b.onclick=()=>openTool(t);g.appendChild(b)
- })
-}
-renderTools();
-
-document.querySelectorAll(".filter").forEach(b=>b.onclick=()=>{
- document.querySelectorAll(".filter").forEach(x=>x.classList.remove("active"));b.classList.add("active");renderTools(b.dataset.filter)
-});
-
-function flow(arr){return `<div class="flow">${arr.map((x,i)=>`${i?'<i>→</i>':''}<span>${x}</span>`).join("")}</div>`}
-function tags(arr){return `<div class="modal-tags">${arr.map(x=>`<span>${x}</span>`).join("")}</div>`}
-function show(html){document.getElementById("modalContent").innerHTML=html;document.getElementById("modal").showModal()}
-function openRole(key){
- const d=roleData[key];
- show(`<div class="modal-inner"><span class="section-kicker">${d.date}</span><h2>${d.title}</h2><div class="modal-sub">${d.company}</div><p class="modal-lead">${d.summary}</p><div class="modal-grid"><section class="modal-panel"><h4>Work performed</h4><ul>${d.work.map(x=>`<li>${x}</li>`).join("")}</ul></section><section class="modal-panel"><h4>Tools & technologies</h4>${tags(d.tools)}<h4 style="margin-top:18px">Workflow</h4>${flow(d.flow)}</section></div></div>`)
-}
-function openTool(t){
- show(`<div class="modal-inner"><div class="modal-top"><div class="modal-logo">${logoHTML(t)}</div><div><span class="section-kicker">TOOL EXPERIENCE</span><h2>${t.name}</h2><div class="modal-sub">${t.roles.join(" • ")}</div></div></div><p class="modal-lead">How I used ${t.name} in my work:</p><div class="modal-grid"><section class="modal-panel"><h4>Work performed</h4><ul>${t.work.map(x=>`<li>${x}</li>`).join("")}</ul></section><section class="modal-panel"><h4>Workflow</h4>${flow(t.flow)}</section></div></div>`)
-}
-document.querySelectorAll(".project-open").forEach(b=>b.onclick=()=>{
- const d=projects[b.dataset.project];
- show(`<div class="modal-inner"><span class="section-kicker">${d.sub}</span><h2>${d.title}</h2><p class="modal-lead">${d.lead}</p><div class="modal-grid"><section class="modal-panel"><h4>Technical work</h4><ul>${d.work.map(x=>`<li>${x}</li>`).join("")}</ul></section><section class="modal-panel"><h4>Architecture flow</h4>${flow(d.flow)}<h4 style="margin-top:18px">Technology</h4>${tags(d.tools)}</section></div></div>`)
-});
-
-document.getElementById("modalClose").onclick=()=>document.getElementById("modal").close();
-document.getElementById("modal").addEventListener("click",e=>{if(e.target.id==="modal")e.target.close()});
-
-const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add("visible")}),{threshold:.12});document.querySelectorAll(".reveal").forEach(x=>obs.observe(x));
-document.querySelectorAll(".tilt").forEach(c=>{c.addEventListener("mousemove",e=>{const r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;c.style.transform=`perspective(1100px) rotateX(${(-y*3.2).toFixed(2)}deg) rotateY(${(x*3.8).toFixed(2)}deg) translateY(-3px)`});c.addEventListener("mouseleave",()=>c.style.transform="")});
-
-const canvas=document.getElementById("particles"),ctx=canvas.getContext("2d");let pts=[];
-function resize(){canvas.width=innerWidth*devicePixelRatio;canvas.height=innerHeight*devicePixelRatio;ctx.setTransform(devicePixelRatio,0,0,devicePixelRatio,0,0);pts=Array.from({length:Math.min(80,Math.floor(innerWidth/18))},()=>({x:Math.random()*innerWidth,y:Math.random()*innerHeight,vx:(Math.random()-.5)*.18,vy:(Math.random()-.5)*.18}))}
-function draw(){ctx.clearRect(0,0,innerWidth,innerHeight);pts.forEach((p,i)=>{p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>innerWidth)p.vx*=-1;if(p.y<0||p.y>innerHeight)p.vy*=-1;ctx.fillStyle="rgba(85,220,255,.35)";ctx.beginPath();ctx.arc(p.x,p.y,1,0,6.28);ctx.fill();for(let j=i+1;j<pts.length;j++){const q=pts[j],d=Math.hypot(p.x-q.x,p.y-q.y);if(d<125){ctx.strokeStyle=`rgba(105,115,255,${(1-d/125)*.08})`;ctx.beginPath();ctx.moveTo(p.x,p.y);ctx.lineTo(q.x,q.y);ctx.stroke()}}});requestAnimationFrame(draw)}
+const canvas=document.getElementById("mesh"),ctx=canvas.getContext("2d");
+let pts=[];
+function resize(){canvas.width=innerWidth*devicePixelRatio;canvas.height=innerHeight*devicePixelRatio;ctx.setTransform(devicePixelRatio,0,0,devicePixelRatio,0,0);pts=Array.from({length:Math.min(60,Math.floor(innerWidth/22))},()=>({x:Math.random()*innerWidth,y:Math.random()*innerHeight,vx:(Math.random()-.5)*.12,vy:(Math.random()-.5)*.12}));}
+function draw(){ctx.clearRect(0,0,innerWidth,innerHeight);for(const p of pts){p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>innerWidth)p.vx*=-1;if(p.y<0||p.y>innerHeight)p.vy*=-1;}for(let i=0;i<pts.length;i++)for(let j=i+1;j<pts.length;j++){let a=pts[i],b=pts[j],d=Math.hypot(a.x-b.x,a.y-b.y);if(d<145){ctx.strokeStyle=`rgba(92,225,230,${(1-d/145)*.12})`;ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.stroke();}}ctx.fillStyle="rgba(111,168,255,.25)";pts.forEach(p=>{ctx.beginPath();ctx.arc(p.x,p.y,1.2,0,Math.PI*2);ctx.fill()});requestAnimationFrame(draw)}
 addEventListener("resize",resize);resize();draw();
-
-document.addEventListener("mousemove",e=>{const g=document.getElementById("cursorGlow");g.style.left=e.clientX+"px";g.style.top=e.clientY+"px"});
-addEventListener("scroll",()=>{document.getElementById("scrollProgress").style.width=(scrollY/(document.documentElement.scrollHeight-innerHeight)*100)+"%"});
-document.getElementById("menu").onclick=()=>document.getElementById("navlinks").classList.toggle("open");
-document.querySelectorAll("#navlinks a").forEach(a=>a.onclick=()=>document.getElementById("navlinks").classList.remove("open"));
-document.getElementById("year").textContent=new Date().getFullYear();

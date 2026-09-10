@@ -3,250 +3,186 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="theme-color" content="#07101f" />
-  <meta name="description" content="Adhithya Tatineni Prakash — Cybersecurity Engineer. Detection engineering, cloud security, endpoint security, vulnerability management, automation and AI security." />
-  <meta property="og:title" content="Adhithya Tatineni Prakash | Cybersecurity Engineer" />
-  <meta property="og:description" content="Security engineering that moves from signal to action." />
-  <meta property="og:type" content="website" />
-  <title>Adhithya Tatineni Prakash | Cybersecurity Engineer</title>
+  <meta name="description" content="Adhithya Tatineni Prakash — Security Engineer portfolio covering security engineering, detection, cloud, vulnerability management, application security and automation." />
+  <meta property="og:title" content="Adhithya Tatineni Prakash | Security Engineer" />
+  <meta property="og:description" content="Security engineering portfolio: architecture, detections, cloud controls, vulnerability management and automation." />
+  <meta name="theme-color" content="#07111f" />
+  <title>Adhithya Tatineni Prakash | Security Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
-  <div class="progress" id="progress"></div>
-  <div class="motion-scene" aria-hidden="true">
-    <div class="aurora aurora-a"></div>
-    <div class="aurora aurora-b"></div>
-    <div class="aurora aurora-c"></div>
-    <div class="cyber-orb orb-a"></div>
-    <div class="cyber-orb orb-b"></div>
-    <div class="cyber-orb orb-c"></div>
-    <div class="mesh mesh-a"></div>
-    <div class="mesh mesh-b"></div>
-  </div>
-  <canvas id="bg-canvas" aria-hidden="true"></canvas>
+  <canvas id="mesh" aria-hidden="true"></canvas>
+  <div class="noise" aria-hidden="true"></div>
 
-  <header class="nav-wrap">
-    <nav class="nav shell" aria-label="Primary navigation">
-      <a href="#top" class="brand" aria-label="Home">
-        <span class="brand-mark">ATP</span>
-        <span class="brand-copy"><strong>Adhithya Tatineni Prakash</strong><small>Cybersecurity Engineer</small></span>
-      </a>
-      <button class="menu-btn" id="menuBtn" aria-label="Open navigation" aria-expanded="false">☰</button>
-      <div class="nav-links" id="navLinks">
-        <a href="#experience">Experience</a>
-        <a href="#tools">Tools</a>
-        <a href="#projects">Projects</a>
-        <a href="#ai">AI Security</a>
-        <a href="#contact">Contact</a>
-        <a class="email-nav" href="mailto:adhithyaprakash23@gmail.com">adhithyaprakash23@gmail.com</a>
-        <a class="pill-link" href="https://github.com/Adhithyaprakash23" target="_blank" rel="noreferrer">GitHub ↗</a>
-      </div>
+  <header class="nav">
+    <a class="brand" href="#home"><span class="shield">A</span><span>ADHITHYA<span class="accent">/SEC</span></span></a>
+    <nav aria-label="Primary navigation">
+      <a href="#work">Work</a><a href="#capabilities">Capabilities</a><a href="#experience">Experience</a><a href="#contact">Contact</a>
     </nav>
+    <a class="status" href="#contact"><i></i> OPEN TO SECURITY ROLES</a>
   </header>
 
-  <main id="main">
-    <section class="hero shell" id="top">
-      <div class="hero-copy reveal">
-        <div class="eyebrow"><span class="status-dot"></span> CYBERSECURITY • CLOUD • DETECTION • AUTOMATION • AI</div>
-        <h1>Security engineering<br><span class="gradient-text">that moves from signal to action.</span></h1>
-        <p class="hero-lede">I work across enterprise security operations, endpoint detection, cloud security, vulnerability management, identity protection, incident response, application deployment engineering and security automation.</p>
-        <div class="email-hero"><span class="mail-pulse">@</span><a href="mailto:adhithyaprakash23@gmail.com">adhithyaprakash23@gmail.com</a></div>
-        <div class="hero-actions">
-          <a class="btn primary" href="#projects">Explore projects <span>↘</span></a>
-          <a class="btn secondary" href="#tools">Explore tools <span>⌁</span></a>
-          <a class="btn ghost" href="mailto:adhithyaprakash23@gmail.com">Contact <span>↗</span></a>
-        </div>
-        <div class="metrics" aria-label="Professional highlights">
-          <div><strong>4+</strong><span>Years</span></div>
-          <div><strong>25+</strong><span>Technologies</span></div>
-          <div><strong>2</strong><span>Public security repos</span></div>
-          <div><strong>M.S.</strong><span>Cybersecurity</span></div>
-        </div>
+  <main>
+    <section class="hero section" id="home">
+      <div class="eyebrow">SECURITY ENGINEERING • DETECTION • CLOUD • AUTOMATION</div>
+      <h1>I engineer security<br><span>that can be proven.</span></h1>
+      <p class="lede">Security Engineer with <strong>6+ years of cybersecurity experience</strong> across security operations, cloud, identity, vulnerability management, application security and engineering. I turn telemetry, controls and attack paths into measurable defenses.</p>
+      <div class="hero-actions">
+        <a class="btn primary" href="#work">Explore security work <span>↗</span></a>
+        <a class="btn" href="https://github.com/Adhithyaprakash23" target="_blank" rel="noopener">GitHub <span>↗</span></a>
+        <a class="btn" href="https://www.linkedin.com/in/adhithyaprakash/" target="_blank" rel="noopener">LinkedIn <span>↗</span></a>
+      </div>
+      <div class="proofbar">
+        <div><b>6+</b><span>Years<br>Cybersecurity</span></div>
+        <div><b>360°</b><span>Security<br>Coverage</span></div>
+        <div><b>2</b><span>Featured Engineering<br>Repositories</span></div>
+        <div><b>01</b><span>Goal: reduce<br>real risk</span></div>
+      </div>
+      <div class="scrollcue">SCROLL TO INVESTIGATE <span>↓</span></div>
+    </section>
+
+    <section class="section manifesto">
+      <div class="section-tag">01 / OPERATING PRINCIPLE</div>
+      <div class="split">
+        <h2>Not a tool list.<br><span>A body of security work.</span></h2>
+        <p>Strong security portfolios show how a practitioner thinks: the threat, the telemetry, the decision, the control and the evidence. This site is organized around that flow—so hiring teams can inspect the work instead of reading buzzwords.</p>
+      </div>
+    </section>
+
+    <section class="section" id="work">
+      <div class="section-head">
+        <div><div class="section-tag">02 / SELECTED WORK</div><h2>Security case files</h2></div>
+        <p>Click a case to inspect the engineering approach.</p>
       </div>
 
-      <div class="hero-console reveal" aria-label="Interactive SOC visualization">
-        <div class="console-top">
-          <div><i></i><i></i><i></i></div>
-          <span>SOC / LIVE SIGNAL MAP</span>
-          <small>LIVE</small>
-        </div>
-        <div class="radar-wrap">
-          <svg viewBox="0 0 560 420" class="radar-svg" role="img" aria-label="Animated security signal graph">
-            <defs>
-              <radialGradient id="radarGlow">
-                <stop offset="0%" stop-color="#3cf5d4" stop-opacity=".18"/>
-                <stop offset="100%" stop-color="#3cf5d4" stop-opacity="0"/>
-              </radialGradient>
-            </defs>
-            <circle cx="280" cy="210" r="170" class="grid-ring"/>
-            <circle cx="280" cy="210" r="120" class="grid-ring"/>
-            <circle cx="280" cy="210" r="70" class="grid-ring"/>
-            <line x1="80" y1="210" x2="480" y2="210" class="grid-line"/>
-            <line x1="280" y1="20" x2="280" y2="400" class="grid-line"/>
-            <circle cx="280" cy="210" r="170" fill="url(#radarGlow)" />
-            <g class="signal-lines">
-              <path d="M280 210 L135 122 L208 300 L390 110 L445 265 L328 352 Z"/>
-            </g>
-            <g class="nodes">
-              <circle cx="135" cy="122" r="8"/><circle cx="208" cy="300" r="8"/>
-              <circle cx="390" cy="110" r="8"/><circle cx="445" cy="265" r="8"/>
-              <circle cx="328" cy="352" r="8"/><circle cx="280" cy="210" r="11" class="core"/>
-            </g>
-            <g class="labels">
-              <text x="94" y="105">IDENTITY</text><text x="155" y="330">ENDPOINT</text>
-              <text x="400" y="92">CLOUD</text><text x="452" y="285">SIEM</text>
-              <text x="292" y="385">VULN</text>
-            </g>
-            <g class="sweep"><path d="M280 210 L280 35 A175 175 0 0 1 455 210 Z"/></g>
-          </svg>
-          <div class="console-readout">
-            <div><span>ALERT QUEUE</span><strong id="alertCount">12</strong></div>
-            <div><span>TRIAGE LATENCY</span><strong>42s</strong></div>
-            <div><span>SIGNAL STATE</span><strong class="ok">NORMAL</strong></div>
+      <div class="projects">
+        <article class="project featured" data-modal="aegis">
+          <div class="project-top"><span>CASE 001</span><span class="live">● FEATURED</span></div>
+          <div class="project-visual cloud">
+            <div class="core">AEGIS<br><small>CONTROL PLANE</small></div>
+            <span class="node n1">IDENTITY</span><span class="node n2">TELEMETRY</span><span class="node n3">POLICY</span><span class="node n4">RESPONSE</span>
           </div>
+          <div class="project-copy">
+            <div class="kicker">CLOUD SECURITY / AUTOMATION / ARCHITECTURE</div>
+            <h3>AegisCloud Autonomous Security</h3>
+            <p>A security engineering project focused on turning cloud signals into a defensible workflow: collect evidence, evaluate risk, map controls and drive response.</p>
+            <div class="chips"><span>Cloud Security</span><span>Detection</span><span>Automation</span><span>Risk</span></div>
+            <button class="textbtn">Inspect case file →</button>
+          </div>
+        </article>
+
+        <article class="project" data-modal="soc">
+          <div class="project-top"><span>CASE 002</span><span>DETECTION ENGINEERING</span></div>
+          <div class="terminal">
+            <div><em>14:31:08</em> alert.received <b>SUCCESS</b></div>
+            <div><em>14:31:12</em> identity.correlate <b>SUCCESS</b></div>
+            <div><em>14:31:15</em> kql.detection <b>HIT</b></div>
+            <div><em>14:31:22</em> mitre.map <b>T1078</b></div>
+            <div><em>14:31:27</em> analyst.verdict <b>ESCALATE</b></div>
+          </div>
+          <div class="project-copy">
+            <div class="kicker">SOC / KQL / MITRE ATT&CK / THREAT HUNTING</div>
+            <h3>Enterprise SOC Detection Engineering Lab</h3>
+            <p>Detection content, attack mappings and investigation workflows designed around repeatable analyst decisions rather than isolated alerts.</p>
+            <div class="chips"><span>Microsoft Sentinel</span><span>KQL</span><span>Sigma</span><span>MITRE ATT&CK</span></div>
+            <button class="textbtn">Inspect case file →</button>
+          </div>
+        </article>
+
+        <article class="project mini" data-modal="vm">
+          <div class="project-top"><span>CASE 003</span><span>RISK ENGINEERING</span></div>
+          <div class="riskviz"><span>CRITICAL</span><div><i style="width:91%"></i></div><span>91</span></div>
+          <div class="project-copy">
+            <div class="kicker">VULNERABILITY MANAGEMENT</div>
+            <h3>Risk-Based Vulnerability Program</h3>
+            <p>Prioritization model connecting exposure, exploitability, asset context and remediation evidence.</p>
+            <div class="chips"><span>Qualys VMDR</span><span>CVE/CVSS</span><span>Remediation</span></div>
+            <button class="textbtn">View methodology →</button>
+          </div>
+        </article>
+
+        <article class="project mini" data-modal="devsec">
+          <div class="project-top"><span>CASE 004</span><span>APPSEC</span></div>
+          <div class="pipeline"><span>CODE</span><i>→</i><span>SAST</span><i>→</i><span>SCA</span><i>→</i><span>DAST</span><i>→</i><span>SHIP</span></div>
+          <div class="project-copy">
+            <div class="kicker">DEVSECOPS / APPLICATION SECURITY</div>
+            <h3>Secure Delivery Pipeline</h3>
+            <p>Security gates for code, dependencies, secrets and runtime testing with actionable developer feedback.</p>
+            <div class="chips"><span>SAST</span><span>DAST</span><span>SCA</span><span>Secrets</span></div>
+            <button class="textbtn">View architecture →</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="capabilities">
+      <div class="section-head">
+        <div><div class="section-tag">03 / CAPABILITIES</div><h2>Defense, end to end.</h2></div>
+        <p>Built around security outcomes—not product logos.</p>
+      </div>
+      <div class="capgrid">
+        <div class="cap"><b>01</b><h3>Security Engineering</h3><p>Defense-in-depth, hardening, endpoint, identity, network and control design.</p><span>CONTROL DESIGN → VALIDATION</span></div>
+        <div class="cap"><b>02</b><h3>Detection & Response</h3><p>Telemetry, SIEM detections, triage, investigations, threat hunting and response workflows.</p><span>SIGNAL → VERDICT → RESPONSE</span></div>
+        <div class="cap"><b>03</b><h3>Cloud Security</h3><p>AWS/Azure security, IAM, logging, posture, segmentation and security architecture.</p><span>IDENTITY → DATA → WORKLOAD</span></div>
+        <div class="cap"><b>04</b><h3>Vulnerability & AppSec</h3><p>Risk-based VM, CVE/CVSS, OWASP, secure SDLC and DevSecOps security gates.</p><span>DISCOVER → PRIORITIZE → FIX</span></div>
+        <div class="cap"><b>05</b><h3>Security Automation</h3><p>Python, PowerShell, APIs and workflow automation for repetitive security operations.</p><span>MANUAL → REPEATABLE → SCALE</span></div>
+        <div class="cap"><b>06</b><h3>Governance & Assurance</h3><p>NIST CSF, CIS, ISO 27001, SOC 2 and evidence-driven control mapping.</p><span>CONTROL → EVIDENCE → ASSURANCE</span></div>
+      </div>
+    </section>
+
+    <section class="section console-section">
+      <div class="section-tag">04 / INTERACTIVE INVESTIGATION</div>
+      <div class="console-wrap">
+        <div class="console-copy">
+          <h2>Think like the analyst.</h2>
+          <p>Run a simulated investigation to see the decision path from suspicious authentication to a defensible incident verdict.</p>
+          <button id="runInvestigation" class="btn primary">Run investigation</button>
         </div>
-        <div class="terminal">
-          <div id="terminalText">› initializing telemetry…</div>
+        <div class="console" id="console" aria-live="polite">
+          <div class="consolebar"><span>SECOPS // INVESTIGATION-042</span><span>● STANDBY</span></div>
+          <div id="consoleLines"><p class="muted">$ awaiting analyst input...</p></div>
         </div>
       </div>
     </section>
 
-    <section class="strip">
-      <div class="shell ticker" aria-label="Core technologies">
-        <span>Microsoft Sentinel</span><span>Splunk</span><span>CrowdStrike</span><span>AWS</span><span>Azure</span><span>Qualys VMDR</span><span>PowerShell</span><span>Python</span><span>Terraform</span><span>MITRE ATT&amp;CK</span>
-      </div>
-    </section>
-
-    <section class="section shell" id="experience">
-      <div class="section-head reveal">
-        <div><span class="index">01 / EXPERIENCE</span><h2>Security work across the stack.</h2></div>
-        <p>Roles are presented as a technical timeline: responsibilities, environments and the security workflows behind the title.</p>
-      </div>
+    <section class="section" id="experience">
+      <div class="section-head"><div><div class="section-tag">05 / EXPERIENCE</div><h2>Progression through security.</h2></div><p>6+ years across analysis, engineering and broader security ownership.</p></div>
       <div class="timeline">
-        <article class="role reveal">
-          <div class="role-number">01</div><div class="role-date">SEP 2025 — PRESENT</div>
-          <div class="role-main"><h3>Security Engineer</h3><p>Holiday Channel</p><div class="chips"><span>Security Operations</span><span>Cloud</span><span>Detection</span></div></div>
-          <button class="text-btn role-open" data-role="holiday">View technical detail ↗</button>
-        </article>
-        <article class="role reveal">
-          <div class="role-number">02</div><div class="role-date">MAY 2024 — SEP 2025</div>
-          <div class="role-main"><h3>Cybersecurity Engineer</h3><p>Keerambadi Cyberspace</p><div class="chips"><span>Endpoint</span><span>Vulnerability</span><span>Identity</span></div></div>
-          <button class="text-btn role-open" data-role="keerambadi">View technical detail ↗</button>
-        </article>
-        <article class="role reveal">
-          <div class="role-number">03</div><div class="role-date">DEC 2023 — MAY 2024</div>
-          <div class="role-main"><h3>Programmer Analyst</h3><p>Cognizant Technology Solutions</p><div class="chips"><span>Automation</span><span>Enterprise IT</span><span>Security</span></div></div>
-          <button class="text-btn role-open" data-role="cognizant">View technical detail ↗</button>
-        </article>
-        <article class="role reveal">
-          <div class="role-number">04</div><div class="role-date">JUL 2022 — DEC 2023</div>
-          <div class="role-main"><h3>Cloud Security Engineer</h3><p>Spark Invotech</p><div class="chips"><span>AWS</span><span>Azure</span><span>IAM</span></div></div>
-          <button class="text-btn role-open" data-role="spark">View technical detail ↗</button>
-        </article>
+        <div class="trow"><span>NOW</span><div><h3>Security Engineer</h3><p>Security engineering, cloud controls, detection, vulnerability reduction, application security and automation.</p></div></div>
+        <div class="trow"><span>03</span><div><h3>Cybersecurity Engineer</h3><p>Engineering security controls and operational improvements across identity, endpoints, infrastructure and monitoring.</p></div></div>
+        <div class="trow"><span>02</span><div><h3>Cybersecurity Analyst</h3><p>Alert triage, investigations, vulnerability analysis, control validation and security operations.</p></div></div>
+        <div class="trow"><span>01</span><div><h3>Security Foundations</h3><p>Systems, networking, cloud and scripting foundations developed into security-focused engineering practice.</p></div></div>
       </div>
+      <p class="truth-note">Use your exact employer names, dates and verified responsibilities in the final published version. The progression above is intentionally role-focused.</p>
     </section>
 
-    <section class="section shell" id="tools">
-      <div class="section-head reveal">
-        <div><span class="index">02 / TOOLBOX</span><h2>Click the tool. See the work behind it.</h2></div>
-        <p>All icons are rendered locally in the page—no third-party image CDN, so the logo tiles stay visible on GitHub Pages.</p>
-      </div>
-      <div class="filter-row reveal" id="filters" aria-label="Filter tools"></div>
-      <div class="tool-grid" id="toolGrid"></div>
+    <section class="section stack">
+      <div class="section-tag">06 / TECHNOLOGY</div>
+      <h2>Tools are implementation details.<br><span>Capability is the differentiator.</span></h2>
+      <div class="marquee"><div>MICROSOFT SENTINEL • DEFENDER XDR • ENTRA ID • AWS • AZURE • QUALYS VMDR • KQL • PYTHON • POWERSHELL • GIT • MITRE ATT&CK • NIST CSF • CIS • ISO 27001 • SOC 2 • SAST • DAST • SCA •</div></div>
     </section>
 
-    <section class="section shell" id="projects">
-      <div class="section-head reveal">
-        <div><span class="index">03 / PROJECTS</span><h2>Security engineering projects with architecture and evidence.</h2></div>
-        <p>Public projects are separated from employer production systems and use synthetic data where appropriate.</p>
-      </div>
-
-      <div class="projects-grid">
-        <article class="project feature reveal">
-          <div class="project-visual cloud-map" aria-hidden="true">
-            <div class="cloud-node n1">GuardDuty</div><div class="cloud-node n2">Normalizer</div><div class="cloud-node n3">Risk Engine</div><div class="cloud-node n4">Planner</div><div class="cloud-node n5">Evidence</div>
-            <svg viewBox="0 0 800 360"><path d="M150 100 C260 100 245 180 350 180 S480 250 575 245"/><path d="M150 100 C300 45 420 100 610 90"/><path d="M350 180 C435 160 470 110 610 90"/></svg>
-          </div>
-          <div class="project-body">
-            <div class="eyebrow">FLAGSHIP CLOUD SECURITY</div>
-            <h3>AegisCloud</h3>
-            <p>Event-driven AWS security platform with finding normalization, contextual risk scoring, response planning, evidence integrity and Terraform security controls.</p>
-            <div class="chips"><span>AWS</span><span>Python</span><span>Terraform</span><span>GuardDuty</span><span>Security Hub</span></div>
-            <div class="project-actions">
-              <button class="btn secondary project-open" data-project="aegis">Interactive case study</button>
-              <a class="btn ghost" href="https://github.com/Adhithyaprakash23/aegiscloud-autonomous-security" target="_blank" rel="noreferrer">GitHub ↗</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="project reveal">
-          <div class="project-visual soc-visual" aria-hidden="true">
-            <div class="log-row"><span>4625</span><b>failed authentication</b><i>medium</i></div>
-            <div class="log-row"><span>4688</span><b>process created</b><i>low</i></div>
-            <div class="log-row hot"><span>KQL</span><b>credential anomaly</b><i>high</i></div>
-            <div class="log-row"><span>ATT&CK</span><b>T1110 mapped</b><i>mapped</i></div>
-          </div>
-          <div class="project-body">
-            <div class="eyebrow">DETECTION ENGINEERING</div>
-            <h3>Enterprise SOC Detection Lab</h3>
-            <p>ATT&amp;CK-aligned detections with Microsoft Sentinel KQL, Sigma rules, threat hunts, synthetic telemetry and incident-response playbooks.</p>
-            <div class="chips"><span>Sentinel</span><span>KQL</span><span>Sigma</span><span>MITRE ATT&amp;CK</span></div>
-            <div class="project-actions">
-              <button class="btn secondary project-open" data-project="soc">Interactive case study</button>
-              <a class="btn ghost" href="https://github.com/Adhithyaprakash23/enterprise-soc-detection-lab" target="_blank" rel="noreferrer">GitHub ↗</a>
-            </div>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section class="section shell" id="ai">
-      <div class="section-head reveal">
-        <div><span class="index">04 / AI SECURITY</span><h2>AI assistance with boundaries around trust and action.</h2></div>
-        <p>The goal is analyst acceleration without delegating high-impact security decisions blindly to automation.</p>
-      </div>
-      <div class="ai-flow reveal">
-        <div><b>01</b><h3>Security Context</h3><p>Alerts, logs, identity and cloud evidence.</p></div>
-        <span>→</span>
-        <div><b>02</b><h3>AI Assistance</h3><p>Summarization, enrichment and documentation.</p></div>
-        <span>→</span>
-        <div><b>03</b><h3>Validation</h3><p>Grounding, output checks and policy boundaries.</p></div>
-        <span>→</span>
-        <div><b>04</b><h3>Human Approval</h3><p>Analyst owns containment and high-impact action.</p></div>
-      </div>
-    </section>
-
-    <section class="cta shell reveal" id="contact">
-      <div>
-        <span class="index">LET'S CONNECT</span>
-        <h2>Security operations, cloud defense, detection engineering or AI security.</h2>
-        <p>Review my projects, explore my technical work, or connect directly.</p>
-      </div>
-      <div class="contact-grid">
-        <a href="https://www.linkedin.com/in/adhithyaprakash/" target="_blank" rel="noreferrer"><span>in</span><div><b>LinkedIn</b><small>Professional profile ↗</small></div></a>
-        <a href="https://github.com/Adhithyaprakash23" target="_blank" rel="noreferrer"><span>GH</span><div><b>GitHub</b><small>Repositories &amp; code ↗</small></div></a>
-        <a href="mailto:adhithyaprakash23@gmail.com"><span>@</span><div><b>Email</b><small>Get in touch ↗</small></div></a>
+    <section class="section contact" id="contact">
+      <div class="section-tag">07 / CONTACT</div>
+      <h2>Build. Detect. Defend.<br><span>Make the evidence visible.</span></h2>
+      <p>Interested in Security Engineering, Cybersecurity Engineering, Cloud Security, Detection Engineering, Vulnerability Management and Security Automation opportunities.</p>
+      <div class="hero-actions center">
+        <a class="btn primary" href="https://www.linkedin.com/in/adhithyaprakash/" target="_blank" rel="noopener">Connect on LinkedIn ↗</a>
+        <a class="btn" href="https://github.com/Adhithyaprakash23" target="_blank" rel="noopener">Inspect GitHub ↗</a>
       </div>
     </section>
   </main>
 
-  <footer class="shell footer">
-    <span>© <span id="year"></span> Adhithya Tatineni Prakash</span>
-    <span>Cybersecurity Engineer • Built for clarity, speed &amp; evidence</span>
-  </footer>
+  <footer><span>ADHITHYA TATINENI PRAKASH</span><span>SECURITY ENGINEERING PORTFOLIO</span><span id="year"></span></footer>
 
-  <dialog id="modal" class="modal">
-    <button class="modal-close" id="modalClose" aria-label="Close">×</button>
+  <dialog id="caseModal">
+    <button class="close" aria-label="Close">×</button>
     <div id="modalContent"></div>
   </dialog>
 
-  <button class="command-hint" id="commandHint" title="Quick navigation">⌘ K</button>
-  <dialog id="command" class="command">
-    <div class="command-search"><span>⌕</span><input id="commandInput" placeholder="Jump to a section or tool…" autocomplete="off" /></div>
-    <div id="commandResults"></div>
-  </dialog>
-
-  <script src="app.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
